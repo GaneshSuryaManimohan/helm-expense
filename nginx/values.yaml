@@ -2,6 +2,6 @@ configmap:
   port: 8080
 deployment:
   replica: 2
-  imageversion: trixie-perl
+  imageversion: stable-perl
 service:
   nodeport: 31080
