@@ -12,8 +12,8 @@ spec:
   selector:
     matchLabels:
       app: nginx
-    purpose: helm-demo
-    tier: frontend
+      purpose: helm-demo
+      tier: frontend
   # the template section defines the pod template that will be used to create pods for this deployment
   template:
     metadata:
