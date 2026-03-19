@@ -3,3 +3,5 @@ configmap:
 deployment:
   replica: 2
   imageversion: latest
+service:
+  nodeport: 31080
