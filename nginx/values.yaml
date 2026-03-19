@@ -1,0 +1,5 @@
+configmap:
+  port: 8080
+deployment:
+  replica: 2
+  imageversion: latest

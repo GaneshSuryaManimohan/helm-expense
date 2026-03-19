@@ -1,0 +1,28 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: nginx-deployment
+  # these are deployment level labels, they are not used for selecting pods, but can be useful for organizing and managing deployments
+  labels:
+    app: nginx
+    purpose: helm-demo
+    tier: frontend
+spec:
+  replicas: {{ .Values.deployment.replica }}
+  selector:
+    matchLabels:
+      app: nginx
+    purpose: helm-demo
+    tier: frontend
+  # the template section defines the pod template that will be used to create pods for this deployment
+  template:
+    metadata:
+      labels:
+        app: nginx
+        purpose: helm-demo
+        tier: frontend
+        extra-key: extra-value
+    spec:
+      containers:
+        - name: nginx
+          image: nginx:{{ .Values.deployment.imageversion}}
