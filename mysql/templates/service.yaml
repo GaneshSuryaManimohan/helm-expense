@@ -1,0 +1,14 @@
+kind: Service
+apiVersion: v1
+metadata:
+  name: mysql
+  namespace: {{ .Values.service.namespace }}
+spec:
+  selector:
+    component: mysql
+    project: expense
+    tier: database
+  ports:
+    - protocol: TCP
+      port: {{ .Values.service.port }}
+      targetPort: {{ .Values.service.port}}

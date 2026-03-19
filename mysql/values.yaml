@@ -1,0 +1,6 @@
+deployment:
+  replicacount: 1
+  imageversion: v1.0
+service:
+  namespace: expense
+  port: 3306
