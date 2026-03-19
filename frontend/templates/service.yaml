@@ -2,7 +2,7 @@ kind: Service
 apiVersion: v1
 metadata:
   name: frontend
-  namespace: {{ .Values.service.namespace }}
+  namespace: expense
 spec:
   type: LoadBalancer
   selector:
