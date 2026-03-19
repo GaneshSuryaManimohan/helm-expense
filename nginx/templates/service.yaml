@@ -2,7 +2,6 @@ kind: Service
 apiVersion: v1
 metadata:
   name: frontend
-  namespace: expense
 spec:
   type: LoadBalancer
   selector:
@@ -13,4 +12,3 @@ spec:
     - protocol: TCP
       port: 80
       targetPort: {{ .Values.configmap.port }}
-      
